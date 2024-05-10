@@ -358,9 +358,40 @@ body {
     color: white;
     padding: 5px;
     font-family: Arial, sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     border-radius: 5px;
 }
 
 .fps-value {
     font-weight: bold;
+.typed-cursor{
+  opacity: 1;
+}
+.typed-cursor.typed-cursor--blink{
+  animation: typedjsBlink 0.7s infinite;
+  -webkit-animation: typedjsBlink 0.7s infinite;
+          animation: typedjsBlink 0.7s infinite;
+}
+@keyframes typedjsBlink{
+  50% { opacity: 0.0; }
+}
+@-webkit-keyframes typedjsBlink{
+  0% { opacity: 1; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1; }
+}
+.BoxAboutMe {
+  padding: 20px;
+  text-shadow: 4px 2px 10px #050303;
+  background:transparent; /* Chỉnh màu background About me, mặc định là trong suốt chỉnh màu lại cho nó tương thích với giao diện nếu muốn */
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  font-family: Rowdies;
+  font-size: 17px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 250ms;
+}
