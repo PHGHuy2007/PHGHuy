@@ -11,8 +11,32 @@
 <div class="mt-36 page-full-wrap relative">
 <img class="display-image m-auto" src="./Css-Javascript/ThanhDieu-Template.png" >
 <body>
+  <title>FPS Display</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div id="fpsCounter" class="fps-counter">FPS: <span id="fpsValue" class="fps-value">0</span></div>
 
+  <script>
+    var fpsCounter = document.getElementById('fpsCounter');
+    var frameCount = 0;
+    var fps = 0;
 
+    function updateFPS() {
+        fps = frameCount;
+        fpsCounter.innerHTML = 'FPS: ' + fps;
+        frameCount = 0;
+    }
+
+    function countFrame() {
+        frameCount++;
+        requestAnimationFrame(countFrame);
+    }
+
+    setInterval(updateFPS, 1000);
+    countFrame();
+</script>
+</body>
 <h2 class="page-title page-text-color page-text-font mt-16 text-center">Phan Hoàng Gia Huy</h2>
 <div class="page-bioline text-fs-16 page-text-color page-text-font mt-8 ln-h-22 text-center">Mới tập làm coder</div>
 <div class="page-bioline text-fs-16 page-text-color page-text-font mt-5 ln-h-22 text-center">Hồng Lĩnh Hà Tĩnh</div>
